@@ -1,0 +1,22 @@
+baseURL = "https://blog@trentmason.id.au/"
+languageCode = "en-au"
+title = "Blog"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  author = "Your Name"
+  description = "Notes, projects, and writing."
+
+[permalinks]
+  posts = "/posts/:slug/"
+
+[markup]
+  [markup.highlight]
+    lineNos = false
+    noClasses = true

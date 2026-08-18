@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="wrap">
+  <section class="intro">
+    <h1>{{ site.Title }}</h1>
+    <p>{{ site.Params.description }}</p>
+  </section>
+
+  <section>
+    <h2>Latest posts</h2>
+    <div class="post-list">
+      {{ $pages := where site.RegularPages "Section" "posts" }}
+      {{ range $pages.ByDate.Reverse }}
+        <article class="post-summary">
+          <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+          <div class="post-meta">{{ .Date.Format "2 January 2006" }}{{ with .ReadingTime }} · {{ . }} min read{{ end }}</div>
+          {{ with .Description }}<p>{{ . }}</p>{{ else }}<p>{{ .Summary }}</p>{{ end }}
+          {{ with .Params.tags }}
+            <div class="tags">
+              {{ range . }}<a href="{{ (printf "tags/%s/" (. | urlize)) | relURL }}">#{{ . }}</a>{{ end }}
+            </div>
+          {{ end }}
+        </article>
+      {{ else }}
+        <p>No posts yet.</p>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

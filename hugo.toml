@@ -1,4 +1,4 @@
-baseURL = "https://blog@trentmason.id.au/"
+baseURL = "https://blog.trentmason.id.au/"
 languageCode = "en-au"
 title = "Blog"
 enableRobotsTXT = true
@@ -7,6 +7,7 @@ enableRobotsTXT = true
   pagerSize = 10
 
 [taxonomies]
+  modality = "modalities"
   tag = "tags"
 
 [params]

@@ -10,7 +10,7 @@ enableRobotsTXT = true
   tag = "tags"
 
 [params]
-  author = "Trent Mason
+  author = "Trent Mason"
   description = "Notes, projects, and writing."
 
 [permalinks]
